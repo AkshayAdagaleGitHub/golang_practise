@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	_ "fmt"
 )
 
@@ -64,28 +63,4 @@ func shortestWordEditPath(source string, target string, words []string) int {
 		}
 	}
 	return -1
-}
-
-// Helper function to run the examples
-func main() {
-	// Example 1
-	source1 := "bit"
-	target1 := "dog"
-	words1 := []string{"but", "put", "big", "pot", "pog", "dog", "lot"}
-	result1 := shortestWordEditPath(source1, target1, words1)
-	fmt.Printf("Source: %s, Target: %s, Result: %d (Expected: 5)\n", source1, target1, result1)
-
-	// Example 2
-	source2 := "no"
-	target2 := "go"
-	words2 := []string{"to"}
-	result2 := shortestWordEditPath(source2, target2, words2)
-	fmt.Printf("Source: %s, Target: %s, Result: %d (Expected: -1)\n", source2, target2, result2)
-
-	// Example 3 (A case where source is not in words, but is the starting point)
-	source3 := "a"
-	target3 := "c"
-	words3 := []string{"b", "c"}
-	result3 := shortestWordEditPath(source3, target3, words3)
-	fmt.Printf("Source: %s, Target: %s, Result: %d (Expected: 2)\n", source3, target3, result3)
 }

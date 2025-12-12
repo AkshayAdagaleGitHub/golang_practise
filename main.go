@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-//TIP <p>To run your code, right-click the code and select <b>Run</b>.</p> <p>Alternatively, click
+// TIP <p>To run your code, right-click the code and select <b>Run</b>.</p> <p>Alternatively, click
 // the <icon src="AllIcons.Actions.Execute"/> icon in the gutter and select the <b>Run</b> menu item from here.</p>
 func main() {
 	//TIP <p>Press <shortcut actionId="ShowIntentionActions"/> when your caret is at the underlined text
@@ -17,4 +17,43 @@ func main() {
 		// for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.</p>
 		fmt.Println("i =", 100/i)
 	}
+	// Shortest word edit path
+	// Example 1
+	source1 := "bit"
+	target1 := "dog"
+	words1 := []string{"but", "put", "big", "pot", "pog", "dog", "lot"}
+	result1 := shortestWordEditPath(source1, target1, words1)
+	fmt.Printf("Source: %s, Target: %s, Result: %d (Expected: 5)\n", source1, target1, result1)
+
+	// Example 2
+	source2 := "no"
+	target2 := "go"
+	words2 := []string{"to"}
+	result2 := shortestWordEditPath(source2, target2, words2)
+	fmt.Printf("Source: %s, Target: %s, Result: %d (Expected: -1)\n", source2, target2, result2)
+
+	// Example 3 (A case where source is not in words, but is the starting point)
+	source3 := "a"
+	target3 := "c"
+	words3 := []string{"b", "c"}
+	result3 := shortestWordEditPath(source3, target3, words3)
+	fmt.Printf("Source: %s, Target: %s, Result: %d (Expected: 2)\n", source3, target3, result3)
+
+	// Busiest time in the mall
+	data := [][]int{
+		{1487799425, 14, 1},
+		{1487799425, 4, 1},
+		{1487799425, 2, 1},
+		{1487800378, 10, 1},
+		{1487800478, 18, 1},
+		{1487901013, 1, 1},
+		{1487901211, 7, 1},
+		{1487901211, 7, 1},
+	}
+	// Expected Output : 1487901211
+	fmt.Println(findBusiestPeriod(data))
+	// Deletion Distance
+	str1 := "frog"
+	str2 := "dog"
+	fmt.Println(delete_distance(str1, str2))
 }
