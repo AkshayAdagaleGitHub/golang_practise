@@ -9,7 +9,7 @@ func minimum(a, b int) int {
 	return b
 }
 
-func delete_distance(str1 string, str2 string) int {
+func deleteDistance(str1 string, str2 string) int {
 	m := len(str1)
 	n := len(str2)
 
